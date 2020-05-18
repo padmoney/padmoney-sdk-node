@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/padmoney/padmoney-sdk-node.svg?branch=master)](https://travis-ci.org/padmoney/padmoney-sdk-node)
 [![Version](https://img.shields.io/npm/v/@padmoney/sdk)](https://www.npmjs.com/package/@padmoney/sdk)
 ![NPM](https://img.shields.io/npm/l/@padmoney/sdk)
-https://img.shields.io/npm/types/@padmoney/sdk
+![Types](https://img.shields.io/npm/types/@padmoney/sdk)
 
 
 ## Instalação
