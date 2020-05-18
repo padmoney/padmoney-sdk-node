@@ -1,18 +1,57 @@
 {
-  "name": "sdk-ts",
+  "name": "@padmoney/sdk",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "keywords": [],
+  "description": "Padmoney SDK for javascript applications",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "",
   "license": "ISC",
-  "prepublish": "tsc",
+  "prepare": "npm run build",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padmoney/padmoney-sdk-node.git"
+  },
   "devDependencies": {
     "@types/node": "^12.12.14",
     "typescript": "^3.9.2"
   },
   "dependencies": {
     "axios": "^0.19.0"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "Padmoney",
+    "SDK",
+    "Boleto",
+    "Bancário",
+    "Banco",
+    "Cobrança",
+    "Cobrar",
+    "Cliente",
+    "Inadiplência",
+    "Fácil",
+    "Simples",
+    "Pagamento",
+    "Pagar",
+    "WEB",
+    "Sistema",
+    "Gerência",
+    "Gerenciar",
+    "Geranciamento",
+    "Conta",
+    "Saldo",
+    "Carteira",
+    "Virtual",
+    "Cancelamento",
+    "Pagador",
+    "Pagadores"
+  ]
 }
