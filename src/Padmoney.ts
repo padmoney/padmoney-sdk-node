@@ -1,7 +1,7 @@
 import Credentials           from './common/Credentials';
-import HttpFactory    from './common/HttpFactory';
-import InvoiceService from './invoices/InvoiceService';
-import PayerService   from './payers/PayerService';
+import HttpFactory           from './common/HttpFactory';
+import InvoiceService        from './invoices/InvoiceService';
+import PayerService          from './payers/PayerService';
 import VirtualAccountService from './virtual-accounts/VirtualAccountService';
 
 export default class Padmoney {

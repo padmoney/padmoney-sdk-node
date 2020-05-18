@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "prepare": "npm run build",
   "scripts": {
     "build": "tsc",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/padmoney/padmoney-sdk-node.git"
+    "url": "git+https://github.com/padmoney/padmoney-sdk-node.git"
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
@@ -53,5 +53,12 @@
     "Cancelamento",
     "Pagador",
     "Pagadores"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/padmoney/padmoney-sdk-node/issues"
+  },
+  "homepage": "https://github.com/padmoney/padmoney-sdk-node#readme",
+  "directories": {
+    "lib": "lib"
+  }
 }
