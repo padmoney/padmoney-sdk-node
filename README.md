@@ -10,7 +10,6 @@
 
 ```
 npm i @padmoney/sdk
-
 ```
 
 ## Como usar
@@ -30,14 +29,14 @@ async function main() {
     const credentials = new CredentialsToken(TOKEN, SECRET)
     const padmoney    = new Padmoney(credentials)
     await padmoney.configure()
-    const invoice = padmoney
+    const invoice = await padmoney
         .invoices
         .builder()
         .addItem(25.50, new Date(2020, 6, 20))
         .addItem(25.50, '2020-07-20')
         .setPayer({
-                name:      'John Dee',
-                nickname:  'John Dee',
+                name:      'John Doe',
+                nickname:  'John Doe',
                 cellPhone: '27999999999',
                 document:  '64773865261',
                 address:   {
