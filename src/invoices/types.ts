@@ -1,9 +1,12 @@
 import { Pagination } from '../common/types'
+import { Payer }      from '..';
 
 export type DiscountType = 'none' | 'fixed' | 'percentage'
 export type PaymentTypes = 'bank_billet'
-export type InvoiceRequestPayer = InvoicePayer | Omit<InvoicePayer, 'id'> | Pick<InvoicePayer, 'id'>
+export type InvoiceRequestPayer = Payer | Omit<Payer, 'id'> | Pick<Payer, 'id'>
 export type InvoiceRequestItem = Pick<Item, 'amount' | 'dueDate'>
+
+export type InvoicePayer = Omit<Payer, 'address'>
 
 export interface BankBillet {
     id: string,
@@ -27,24 +30,6 @@ export interface Item {
     bankBillet: BankBillet
 }
 
-export interface InvoicePayer {
-    id: string
-    name: string
-    document: string
-    email: string
-    phoneNumber: string
-    address: {
-        zipcode: string,
-        address: string,
-        neighborhood: string,
-        addressNumber: string,
-        addressComplement?: string,
-        city: string,
-        state: string,
-        number: string
-    }
-}
-
 export interface InvoiceRequest {
     virtualAccountID?: string
     documentNumber?: string
@@ -64,7 +49,7 @@ export interface InvoiceRequest {
 
     items: InvoiceRequestItem[]
 
-    payableWith: Array<PaymentTypes>
+    payableWith?: Array<PaymentTypes>
 }
 
 export interface InvoiceResponse {

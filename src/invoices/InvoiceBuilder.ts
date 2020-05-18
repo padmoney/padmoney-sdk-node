@@ -1,5 +1,5 @@
-import { DiscountType, InvoiceRequest, InvoiceResponse, InvoicePayer } from './types';
-import InvoiceService                                                  from './InvoiceService';
+import { DiscountType, InvoiceRequest, InvoiceResponse, InvoicePayer, InvoiceRequestPayer } from './types';
+import InvoiceService                                                                       from './InvoiceService';
 
 export default class InvoiceBuilder {
     private readonly service: InvoiceService;
@@ -40,7 +40,7 @@ export default class InvoiceBuilder {
         return this
     }
 
-    public setPayer(payer: Pick<InvoicePayer, 'id'> | Partial<InvoicePayer>): InvoiceBuilder {
+    public setPayer(payer: InvoiceRequestPayer): InvoiceBuilder {
         Object.assign(this.invoiceRequest.payer, payer);
         return this
     }
